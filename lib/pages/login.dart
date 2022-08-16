@@ -23,12 +23,19 @@ class _LoginPageState extends State<LoginPage> {
                 Column(
                   children: [
                     CircleAvatar(
+                      backgroundColor: Colors.white,
                       radius: 60,
+                      backgroundImage: NetworkImage(
+                          "https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"),
                     ),
                     SizedBox(
                       height: 30,
                     ),
-                    Text("HOPE-CAN"),
+                    Text(
+                      "HOPE-CAN",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
                     SizedBox(
                       height: 15,
                     ),
@@ -66,7 +73,9 @@ class _LoginPageState extends State<LoginPage> {
                       height: 30,
                       child: RaisedButton(
                         color: Colors.greenAccent,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, "/home");
+                        },
                         child: Text(
                           "Ingresar",
                           style: TextStyle(
